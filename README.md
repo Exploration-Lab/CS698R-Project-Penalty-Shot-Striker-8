@@ -1,12 +1,14 @@
 # CS698R-Project-Penalty-Shot-Striker-8
 
 ## Introduction
-Learning sources by which agents can communicate with complicated environments and individuals is a crucial aim of decision neuroscience and Game theory Myerson [2013]. In most experimental standards, choices are discrete,play is static, and optimal solutions are known. 
+Learning sources by which agents can communicate with complicated environments and individuals is a crucial aim of decision neuroscience and Game theory Myerson [[2013]](#1). In most experimental standards, choices are discrete, play is static, and optimal solutions are known. 
 Yet, in real environments, communications between agents typically
 involve continuous action spaces, continuous dynamics, and no known optimal solution. Here, we overcome this issue by using a “penalty shot” task in which agents compete against each other in a competitive, real-time videogame.<br/>This paradigm generates a rich complexity in individuals’ behavior that can be succinctly described by individualized, instantaneous policy and value functions, facilitating analysis at multiple timescales of interest. It quantifies complex interactions between various agents in a parsimonious manner and suggests new classes of tractable paradigms for studying human behavior and decision-making. From a game-theoretic and a neuroscientific point of
 view,it can give us tremendous insights into decision-making.
 <br/>
 <br/>Here we conduct a systematic evaluation of our defined problem using two experiments first is finding the optimal results with discretized action space, and the second is with continuous space. We use baselines for the model training and evaluation. We also perform experiments with multiple hyperparameters during model tuning and with dynamics of the environment, like changing the puck’s velocity, the bars length etc.
+
+## 
 
 ## Solution Approach
 
@@ -16,8 +18,18 @@ So we created two environment functions, Kickenv1 and Kickenv2. Kickenv1 takes b
 
 ## Observation and Results
 
-We looked at the average rewards obtained by the agents for different velocity profiles, and we noticed that the bar always won for low velocities. For high velocities, the puck always won. We used baselines for the model training and evaluation. After evaluating the approaches, we found that the experimental results for continuous action space settings are better than the discrete ones. Discrete action space setting experiments showed that the policies used a lot of time to evaluate and did not perform well. In contrast, the continuous action space setting converged very fast. We also performed experiments with multiple hyperparameters during model tuning and with environment dynamics, like changing the puck's velocity, the bar's length, etc.
+We looked at the average rewards obtained by the agents for different velocity profiles, and we noticed that the bar always won for low velocities. For high velocities, the puck always won. We used baselines for the model training and evaluation. After evaluating the approaches, we found that the experimental results for continuous action space settings are better than the discrete ones. Discrete action space setting experiments showed that the policies used a lot of time to evaluate and did not perform well. In contrast, the continuous action space setting converged very fast. We also performed experiments with multiple hyperparameters during model tuning and with environment dynamics, like changing the puck's velocity, the bar's length, etc. Below figures show the experimental results for two different settings of velocity with various algorithms.
 
+<!-- ![Screenshot](high_velocity.png) -->
+
+<!-- <p align="center">
+  <img src="high_velocity.png" width="550" title="Experimental results for various algorithm with velocity 0.3 mean rewards vs number of episodes (a) A2C, no. timesteps = 1000, no. episodes = 100, (b) PPO, no. timesteps = 1000, no. episodes = 100, and (c) DDPG, no. timesteps = 1000, no. episodes = 100">
+  <img src="low_velocity.png" width="350" alt="Experimental results for various algorithm with velocity 0.01 mean rewards vs number of episodes (a) A2C, no. timesteps = 1000, no. episodes = 70, (b) PPO, no. timesteps = 1000, no. episodes = 200">
+</p> -->
+
+![High_velocity result](high_velocity1.png "Experimental results for various algorithm with velocity 0.3 mean rewards vs number of episodes (a) A2C, no. timesteps = 1000, no. episodes = 100, (b) PPO, no. timesteps = 1000, no. episodes = 100, and (c) DDPG, no. timesteps = 1000, no. episodes = 100")
+
+![Low_velocity result](low_velocity.png "Experimental results for various algorithm with velocity 0.01 mean rewards vs number of episodes (a) A2C, no. timesteps = 1000, no. episodes = 70, (b) PPO, no. timesteps = 1000, no. episodes = 200")
 
 
 
@@ -25,3 +37,9 @@ We looked at the average rewards obtained by the agents for different velocity p
 
 Download the DDPG, PPO and A2C notebooks and then you can run them directly on your system or on Google colab.
 
+## References
+<a id="1">[1]</a> 
+Roger B Myerson. 
+Game theory. 
+Harvard university press, 2013
+http://www.ru.ac.bd/stat/wp-content/uploads/sites/25/2019/03/405_06_Myerson_Game-Theory_-Analysis-of-Conflict-Harvard-University-Press-1997.pdf
