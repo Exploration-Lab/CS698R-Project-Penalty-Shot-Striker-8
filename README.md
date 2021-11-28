@@ -16,6 +16,9 @@ So we created two environment functions, Kickenv1 and Kickenv2. Kickenv1 takes b
 
 ## Observation and Results
 
+We looked at the average rewards obtained by the agents for different velocity profiles, and we noticed that the bar always won for low velocities. For high velocities, the puck always won. We used baselines for the model training and evaluation. After evaluating the approaches, we found that the experimental results for continuous action space settings are better than the discrete ones. Discrete action space setting experiments showed that the policies used a lot of time to evaluate and did not perform well. In contrast, the continuous action space setting converged very fast. We also performed experiments with multiple hyperparameters during model tuning and with environment dynamics, like changing the puck's velocity, the bar's length, etc.
+
+
 
 
 ## How to run?
